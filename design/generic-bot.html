@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Gallery - Oxfin HelpDesk Admin Dashboard</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Marketplace for Bootstrap Admin Dashboards" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" />
+
+    <!-- *************
+			************ CSS Files *************
+		************* -->
+    <!-- Icomoon Font Icons css -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+    <!-- Scrollbar CSS -->
+    <link rel="stylesheet" href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
+
+    <!-- Tailwind play cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- End tailwind play cdn -->
+</head>
+
+<body>
+    <!-- Page wrapper start -->
+    <div class="page-wrapper">
+        <!-- Main container start -->
+        <div class="main-container">
+            <!-- Sidebar wrapper start -->
+            <nav id="sidebar" class="sidebar-wrapper">
+                <!-- App brand starts -->
+                <div class="app-brand px-3 py-2 d-flex align-items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo.svg" class="logo" alt="Bootstrap Gallery" />
+                    </a>
+                </div>
+                <!-- App brand ends -->
+
+                <!-- Sidebar menu starts -->
+                <div class="sidebarMenuScroll">
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="icon-stacked_line_chart"></i>
+                                <span class="menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="create-bot.html">
+                                <i class="icon-stacked_line_chart"></i>
+                                <span class="menu-text">Create Bot</span>
+                            </a>
+                        </li>
+                        <li class="treeview active">
+                            <a href="#!">
+                                <i class="icon-add_task"></i>
+                                <span class="menu-text">Bots</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="generic-bot.html" class="active-sub">Generic Bot</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar menu ends -->
+            </nav>
+            <!-- Sidebar wrapper end -->
+
+            <!-- App container starts -->
+            <div class="app-container">
+                <!-- App header starts -->
+                <div class="app-header d-flex align-items-center">
+                    <!-- Toggle buttons start -->
+                    <div class="d-flex">
+                        <button class="btn btn-outline-light toggle-sidebar" id="toggle-sidebar">
+                            <i class="icon-menu"></i>
+                        </button>
+                        <button class="btn btn-outline-light pin-sidebar" id="pin-sidebar">
+                            <i class="icon-menu"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- App header ends -->
+                <!-- App body starts -->
+                <div class="app-body">
+                    <!-- Container starts -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-5 col-12">
+                                <h3 class="mb-3">Generic Bot</h3>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter name" />
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">System Message</label>
+                                    <input type="text" class="form-control" placeholder="Enter system message" />
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Selcet Voice</label>
+                                    <select class="form-select">
+                                        <option selected="">Voices</option>
+                                        <option value="1">Voice one</option>
+                                        <option value="2">Voice Two</option>
+                                        <option value="3">Voice Three</option>
+                                    </select>
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Greeting Message</label>
+                                    <input type="text" class="form-control" placeholder="Enter greeting message" />
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Timeout Hangup Message</label>
+                                    <input type="text" class="form-control" placeholder="Timeout Hangup Message" />
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Error Message</label>
+                                    <input type="text" class="form-control" placeholder="Error Message" />
+                                </div>
+                                <div class="m-0 mb-4">
+                                    <label class="form-label">Selcet Timezone</label>
+                                    <select class="form-select">
+                                        <option selected="">Voices</option>
+                                        <option value="1">America Denvor</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                            <div class="col-sm-7 col-12">
+                                <div class="custom-tabs-container">
+                                    <ul class="nav nav-tabs" id="customTab3" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="tab--botHelp" data-bs-toggle="tab"
+                                                href="#botHelp" role="tab" aria-controls="botHelp"
+                                                aria-selected="true"><i class="icon-layers"></i>Help</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="tab-botAddress" data-bs-toggle="tab"
+                                                href="#botAddress" role="tab" aria-controls="botAddress"
+                                                aria-selected="false"><i class="icon-layers"></i>Address</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="tab-botQuestion" data-bs-toggle="tab"
+                                                href="#botQuestion" role="tab" aria-controls="botQuestion"
+                                                aria-selected="false"><i class="icon-layers"></i>Questions</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="tab-botTransfers" data-bs-toggle="tab"
+                                                href="#botTransfers" role="tab" aria-controls="botTransfers"
+                                                aria-selected="false"><i class="icon-layers"></i>Transfers</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="tab-botPersonality" data-bs-toggle="tab"
+                                                href="#botPersonality" role="tab" aria-controls="botPersonality"
+                                                aria-selected="false"><i class="icon-layers"></i>Personality</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="customTabContent3">
+                                        <div class="tab-pane fade show active" id="botHelp" role="tabpanel">
+                                            <div class="row gx-3">
+                                                <div class="col-12">
+                                                    <h1>Getting the most out of your bot</h1>
+                                                    <p>
+                                                        To get the most out of your bot, you should
+                                                        provide as much information as possible. This will
+                                                        help the bot provide more accurate information to
+                                                        the user. The more information you provide, the
+                                                        better the bot will be able to assist the user.
+                                                    </p>
+                                                    <p>
+                                                        Treat the bot like a new employee. It has a lot of
+                                                        general information and can make inferences based
+                                                        on that information. However, it doesn't know
+                                                        anything about your business or what you do,
+                                                        specifically. All information provided here will
+                                                        be given to the bot to help it make better
+                                                        decisions. Just like a new employee, if you don't
+                                                        provide the information, the bot won't be able to
+                                                        help the user as well as it could.
+                                                    </p>
+                                                    <p>
+                                                        There is no such thing as too much information.
+                                                        Everything you add, no matter how small, will
+                                                        help. That said, quality information is better
+                                                        than quantity. If you provide a lot of
+                                                        information, but it's not accurate, the bot will
+                                                        repeat those mistakes.
+                                                    </p>
+                                                    <p>
+                                                        Everything provided WILL be accessible to anyone
+                                                        calling in. Do not provide any sensitive
+                                                        information. The bot is not secure and should not
+                                                        be used to store any sensitive data.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="botAddress" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="card mb-3">
+                                                        <div class="card-body">
+                                                            <p class="lh-2">
+                                                                Useful if you have a store or office location that the
+                                                                user may want to visit. Completely optional. Note that
+                                                                if you provide it here, it will be accessible to anyone
+                                                                calling in.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-0 mb-4">
+                                                        <label class="form-label">Address</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter address" />
+                                                    </div>
+                                                    <div class="m-0 mb-4">
+                                                        <label class="form-label">City</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter city" />
+                                                    </div>
+                                                    <div class="m-0 mb-4">
+                                                        <label class="form-label">Selcet State</label>
+                                                        <select class="form-select">
+                                                            <option selected="">Alaska</option>
+                                                            <option value="1">Colorado</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="m-0 mb-4">
+                                                        <label class="form-label">Zip</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter zip" />
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="botQuestion" role="tabpanel">
+                                            <div class="col-12">
+                                                <div class="card mb-3">
+                                                    <div class="card-body">
+                                                        <p class="lh-2">
+                                                            This is a simple way to provide question and answer training
+                                                            to the bot. Treat it like an FAQ or a knowledge base. The
+                                                            bot will use this information to help answer user questions.
+                                                            Consider any question that a receptionist or customer
+                                                            service representative might be asked.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Question</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Ex: What time are you opne?" />
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Answer</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Ex: We are open from 9am to 5pm Monday through Friday" />
+                                                </div>
+                                                <button type="button" class="btn btn-primary">
+                                                    Save
+                                                </button>
+
+                                                <button type="button" class="btn btn-danger">
+                                                    Upload CSV
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="botTransfers" role="tabpanel">
+                                            <div class="col-12">
+                                                <div class="card mb-3">
+                                                    <div class="card-body">
+                                                        <p class="lh-2">
+                                                            Transfers allows the bot send the user to another phone
+                                                            number. This is useful if the user needs to speak to a human
+                                                            or if the bot can't answer the user's questions. Be very
+                                                            descriptive with names, as this will help the bot know when
+                                                            and who it can transfer to.
+                                                        </p>
+
+                                                        <p class="lh-2">
+                                                            Any phone number provided here will be accessible to anyone
+                                                            calling in. The bot will not get the number directly, only
+                                                            the name, but anyone will be able to initiate the transfer.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Name</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Ex: Customer Service" />
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Phone Number</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Ex: 555-555-5555" />
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Reasons</label>
+                                                    <textarea class="form-control" rows="3"
+                                                        placeholder="List a few reasons why the bot might transfer to this number. You can give the bot directives here. This will help it to know when it is appropriate to transfer, otherwise it might do so prematurely."></textarea>
+                                                </div>
+                                                <button type="button" class="btn btn-primary">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="botPersonality" role="tabpanel">
+                                            <div class="col-12">
+                                                <div class="card mb-3">
+                                                    <div class="card-body">
+                                                        <p class="lh-2">
+                                                            These personality traits will be passed to the bot to help
+                                                            it provide a more human-like experience to the user. The bot
+                                                            will use these traits to determine how to respond to the
+                                                            user.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Talktive 62%</label>
+                                                    <input type="range" class="form-control-range" data-id="talkative"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Friendlt 92%</label>
+                                                    <input type="range" class="form-control-range" data-id="friendly"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Professional 90%</label>
+                                                    <input type="range" class="form-control-range" data-id="professional"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Curious 70%</label>
+                                                    <input type="range" class="form-control-range" data-id="professional"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Witty 60%</label>
+                                                    <input type="range" class="form-control-range" data-id="witty"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Confident 80%</label>
+                                                    <input type="range" class="form-control-range" data-id="confident"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Patience 80%</label>
+                                                    <input type="range" class="form-control-range" data-id="patience"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Empathy 75%</label>
+                                                    <input type="range" class="form-control-range" data-id="empathy"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Sarcasm 50%</label>
+                                                    <input type="range" class="form-control-range" data-id="sarcasm"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <div class="m-0 mb-4">
+                                                    <label class="form-label">Humor 60%</label>
+                                                    <input type="range" class="form-control-range" data-id="humor"
+                                                        min="0" max="100" style="width: 100%">
+                                                </div>
+                                                <button type="button" class="btn btn-primary">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Container ends -->
+                </div>
+                <!-- App body ends -->
+
+                <!-- App footer start -->
+                <div class="app-footer">
+                    <span>© Bootstrap Gallery 2023</span>
+                </div>
+                <!-- App footer end -->
+            </div>
+            <!-- App container ends -->
+        </div>
+        <!-- Main container end -->
+    </div>
+    <!-- Page wrapper end -->
+
+    <!-- *************
+			************ JavaScript Files *************
+		************* -->
+    <!-- Required jQuery first, then Bootstrap Bundle JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- *************
+			************ Vendor Js Files *************
+		************* -->
+
+    <!-- Overlay Scroll JS -->
+    <script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
+    <script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
+
+    <!-- Apex Charts -->
+    <script src="assets/vendor/apex/apexcharts.min.js"></script>
+    <script src="assets/vendor/apex/custom/home/ticketsData.js"></script>
+    <script src="assets/vendor/apex/custom/home/avgTimeData.js"></script>
+    <script src="assets/vendor/apex/custom/home/liveCallsData.js"></script>
+    <script src="assets/vendor/apex/custom/home/agentsLiveData.js"></script>
+    <script src="assets/vendor/apex/custom/home/ticketsPriorityData.js"></script>
+    <script src="assets/vendor/apex/custom/home/newClosedData.js"></script>
+
+    <!-- Rating -->
+    <script src="assets/vendor/rating/raty.js"></script>
+    <script src="assets/vendor/rating/raty-custom.js"></script>
+
+    <!-- Custom JS files -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

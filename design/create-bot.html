@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Gallery - Oxfin HelpDesk Admin Dashboard</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Marketplace for Bootstrap Admin Dashboards" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" />
+
+    <!-- *************
+			************ CSS Files *************
+		************* -->
+    <!-- Icomoon Font Icons css -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
+
+    <!-- Font Awsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awsome CDN END -->
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+    <!-- Scrollbar CSS -->
+    <link rel="stylesheet" href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
+
+    <!-- Tailwind play cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- End tailwind play cdn -->
+</head>
+
+<body>
+    <!-- Page wrapper start -->
+    <div class="page-wrapper">
+        <!-- Main container start -->
+        <div class="main-container">
+            <!-- Sidebar wrapper start -->
+            <nav id="sidebar" class="sidebar-wrapper">
+                <!-- App brand starts -->
+                <div class="app-brand px-3 py-2 d-flex align-items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo.svg" class="logo" alt="Bootstrap Gallery" />
+                    </a>
+                </div>
+                <!-- App brand ends -->
+
+                <!-- Sidebar menu starts -->
+                <div class="sidebarMenuScroll">
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="icon-stacked_line_chart"></i>
+                                <span class="menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="active current-page">
+                            <a href="create-bot.html">
+                                <i class="icon-stacked_line_chart"></i>
+                                <span class="menu-text">Create Bot</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#!">
+                                <i class="icon-add_task"></i>
+                                <span class="menu-text">Bots</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="generic-bot.html">Generic Bot</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar menu ends -->
+            </nav>
+            <!-- Sidebar wrapper end -->
+
+            <!-- App container starts -->
+            <div class="app-container">
+                <!-- App header starts -->
+                <div class="app-header d-flex align-items-center">
+                    <!-- Toggle buttons start -->
+                    <div class="d-flex">
+                        <button class="btn btn-outline-light toggle-sidebar" id="toggle-sidebar">
+                            <i class="icon-menu"></i>
+                        </button>
+                        <button class="btn btn-outline-light pin-sidebar" id="pin-sidebar">
+                            <i class="icon-menu"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- App header ends -->
+                <!-- App body starts -->
+                <div class="app-body">
+                    <!-- Container starts -->
+                    <div class="container-fluid mb-6">
+                        <!-- Start Row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="m-0">
+                                            <label class="form-label">Bot Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter text" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <h4 class="mb-3">Templates</h4>
+                            </div>
+                        </div>
+
+                        <!-- Start Row -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card cursor-pointer mb-4" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalCenter">
+                                    <div class="card-header">
+                                        <div class="flex items-center gap-2">
+                                            <div class="border p-2 rounded-3">
+                                                <span class="fs-3 icon-plus-circle"></span>
+                                            </div>
+                                            <h5 class="card-title">Blank Template</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+
+                                            <div class="ms-1">
+                                                <p>
+                                                    This blank slate template with minimal configurations. It's a
+                                                    starting point for creating your custom assistant.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Start Row -->
+                        <div class="card-container row">
+                            <div class="col-sm-3 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="flex items-center gap-2">
+                                            <div class="border p-2 rounded-3">
+                                                <span class="fs-3 icon-align-left"></span>
+                                            </div>
+                                            <h5 class="card-title">Appointment Setter</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+
+                                            <div class="ms-1">
+                                                <p>
+                                                    This is a wider card with supporting text below as a
+                                                    natural lead-in to additional content. This content
+                                                    is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="flex items-center gap-2">
+                                            <div class="border p-2 rounded-3">
+                                                <i class="fa-solid fa-ear-listen text-xl"></i>
+                                            </div>
+                                            <h5 class="card-title">Customer Support</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+
+                                            <div class="ms-1">
+                                                <p>
+                                                    This is a wider card with supporting text below as a
+                                                    natural lead-in to additional content. This content
+                                                    is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="flex items-center gap-2">
+                                            <div class="border p-2 rounded-3">
+                                                <i class="fa-solid fa-circle-question text-xl"></i>
+                                            </div>
+                                            <h5 class="card-title">Inbound Q/A</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+
+                                            <div class="ms-1">
+                                                <p>
+                                                    This is a wider card with supporting text below as a
+                                                    natural lead-in to additional content. This content
+                                                    is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="flex items-center gap-2">
+                                            <div class="border p-2 rounded-3">
+                                                <i class="fa-solid fa-gamepad text-xl"></i>
+                                            </div>
+                                            <h5 class="card-title">Game NPC</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+
+                                            <div class="ms-1">
+                                                <p>
+                                                    This is a wider card with supporting text below as a
+                                                    natural lead-in to additional content. This content
+                                                    is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- Container ends -->
+                    <!-- App body ends -->
+
+                    <!-- Blank Template Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                                        Disruptive Confrence Room
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter name" />
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">System Message</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter system message" />
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Selcet Voice</label>
+                                            <select class="form-select">
+                                                <option selected="">Voices</option>
+                                                <option value="1">Voice one</option>
+                                                <option value="2">Voice Two</option>
+                                                <option value="3">Voice Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Greeting Message</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter greeting message" />
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Timeout Hangup Message</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Timeout Hangup Message" />
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Error Message</label>
+                                            <input type="text" class="form-control" placeholder="Error Message" />
+                                        </div>
+                                        <div class="m-0 mb-4">
+                                            <label class="form-label">Selcet Timezone</label>
+                                            <select class="form-select">
+                                                <option selected="">Voices</option>
+                                                <option value="1">America Denvor</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="button" class="btn btn-primary">
+                                            Create Bot
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Blank Template Modal -->
+
+                    <!-- App footer start -->
+                    <div class="app-footer">
+                        <span>© Bootstrap Gallery 2023</span>
+                    </div>
+                    <!-- App footer end -->
+                </div>
+                <!-- App container ends -->
+            </div>
+            <!-- Main container end -->
+        </div>
+        <!-- Page wrapper end -->
+
+        <!-- *************
+			************ JavaScript Files *************
+		************* -->
+        <!-- Required jQuery first, then Bootstrap Bundle JS -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+        <!-- *************
+			************ Vendor Js Files *************
+		************* -->
+
+        <!-- Overlay Scroll JS -->
+        <script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
+        <script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
+
+        <!-- Apex Charts -->
+        <script src="assets/vendor/apex/apexcharts.min.js"></script>
+        <script src="assets/vendor/apex/custom/home/ticketsData.js"></script>
+        <script src="assets/vendor/apex/custom/home/avgTimeData.js"></script>
+        <script src="assets/vendor/apex/custom/home/liveCallsData.js"></script>
+        <script src="assets/vendor/apex/custom/home/agentsLiveData.js"></script>
+        <script src="assets/vendor/apex/custom/home/ticketsPriorityData.js"></script>
+        <script src="assets/vendor/apex/custom/home/newClosedData.js"></script>
+
+        <!-- Rating -->
+        <script src="assets/vendor/rating/raty.js"></script>
+        <script src="assets/vendor/rating/raty-custom.js"></script>
+
+        <!-- Custom JS files -->
+        <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
